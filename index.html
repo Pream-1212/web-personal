@@ -1,133 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Twesige Pream Queen - Portfolio</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Twesige Pream Queen - Portfolio</title>
 
-  <!-- Bootstrap CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="profile.css">
-  <!-- Custom CSS -->
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
-    body {
-      padding-top: 70px; /* prevent navbar from covering content */
-      font-family: Arial, sans-serif;
-    }
-    section {
-      padding: 80px 20px;
-    }
-    header.hero {
-      text-align: center;
-      padding: 100px 20px;
-      background: #124170;
-    }
-    header.hero img {
-      border-radius: 15px;
-      margin: 20px 0;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #124170;
-      margin-top: 50px;
-    }
-    .btn-primary {
-      background-color: #124170;
-      border: none;
-    }
-    .btn-primary:hover {
-      background-color: #124170;
-    }
-  </style>
-</head>
-<body>
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="profile.css" />
+    <!-- Custom CSS -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      body {
+        padding-top: 70px; /* prevent navbar from covering content */
+        font-family: Arial, sans-serif;
+      }
+      section {
+        padding: 80px 20px;
+      }
+      header.hero {
+        text-align: center;
+        padding: 100px 20px;
+        background: #124170;
+      }
+      header.hero img {
+        border-radius: 15px;
+        margin: 20px 0;
+      }
+      footer {
+        text-align: center;
+        padding: 20px;
+        background: #124170;
+        margin-top: 50px;
+      }
+      .btn-primary {
+        background-color: #124170;
+        border: none;
+      }
+      .btn-primary:hover {
+        background-color: #124170;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav
+      class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm"
+    >
+      <div class="container">
+        <a class="navbar-brand fw-bold" href="#">Twesige Pream Queen</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-  <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm">
-    <div class="container">
-      <a class="navbar-brand fw-bold" href="#">Twesige Pream Queen</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#education">Education</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
 
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+    <!-- Hero Section -->
+    <header class="hero">
+      <h1>Hello! I’m Twesige Pream Queen</h1>
+      <p>
+        <i
+          ><em
+            >“Aspiring Software Engineer | JavaScript Enthusiast | ICT Learner
+            (certified) ”</em
+          ></i
+        >
+      </p>
+      <img src="myimage.jpg" width="300" height="400" alt="Profile Picture" />
+      <p class="lead">
+        JavaScript Enthusiast | CSE Student at Refactory Academy | Groundbreaker
+        Talent
+      </p>
+      <a href="#about" class="btn btn-primary">Learn More</a>
+    </header>
+
+    <!-- About Me -->
+    <section id="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          Hi! I am Twesige Pream Queen. I have basic knowledge in tech including
+          HTML, CSS, and JavaScript. I enjoy learning new technologies and
+          expanding my skills in ICT and programming.
+        </p>
+        <pre>
+Full Name:TWESIGE PREAM QUEEN
+Date of Birth: 05th May,2005
+Currently:  Student at Refactory Academy
+Location: Uganda, East Africa.
+
+        </pre>
+        <img
+          src="me.jpg"
+          width="300"
+          height="400"
+          alt="Profile Picture"
+          class="img-fluid rounded"
+        />
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education" class="same-bg">
+      <div class="container">
+        <h2>Education Background</h2>
+        <ul>
+          From
+          <li>2025-2026: CSE-Javascript -- At Refactory Academy</li>
+          <li>
+            2023-2024: Uganda Advanced Certificate of Education -- Saint Andrea
+            Kaahwa's College(STAKC)
+          </li>
+          <li>2021-2022: Certificate in ICT -- RedEarth Education</li>
+          <li>2018-2022: Uganda Certificate of Education -- STAKC</li>
+          <li>interest: Coding</li>
         </ul>
       </div>
-    </div>
-  </nav>
+    </section>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <h1>Hello! I’m Twesige Pream Queen</h1>
-    <img src="myimage.jpg" width="300" height="400" alt="Profile Picture">
-    <p class="lead">JavaScript Enthusiast | CSE Student at Refactory Academy | Groundbreaker Talent</p>
-    <a href="#about" class="btn btn-primary">Learn More</a>
-  </header>
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container">
+        <h2>Skills</h2>
+       <p>I can use tools like HTML, CSS knowledge with Javascript life provider in this Tech world.  </p>
+      </div>
+    </section>
 
-  <!-- About Me -->
-  <section id="about">
-    <div class="container">
-      <h2>About Me</h2>
-      <p>
-        Hi! I am Twesige Pream Queen. I have basic knowledge in tech including
-        HTML, CSS, and JavaScript. I enjoy learning new technologies and
-        expanding my skills in ICT and programming.
-      </p>
-      <img src="me.jpg" width="300" height="400" alt="Profile Picture" class="img-fluid rounded">
-    </div>
-  </section>
+    <!-- Contact -->
+    <section id="contact" class="same-bg">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>
+          Email:
+          <a href="preamqueentwesige@gmail.com">preamqueentwesige@gmail.com</a>
+        </p>
+        <p>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/queen-pream-twesige-6b470837a/"
+            >LinkedIn Profile</a
+          >
+        </p>
+      </div>
+    </section>
 
-  <!-- Education -->
-  <section id="education" class="same-bg">
-    <div class="container">
-      <h2>Education</h2>
-      <ul>
-        <li>2024: Finished Form 6</li>
-        <li>2022: Completed S.4</li>
-        <li>Basic ICT knowledge</li>
-      </ul>
-    </div>
-  </section>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2025 Twesige Pream Queen. All rights reserved.</p>
+    </footer>
 
-  <!-- Skills -->
-  <section id="skills">
-    <div class="container">
-      <h2>Skills</h2>
-      <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript</li>
-        <li>Basic ICT knowledge</li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact" class="same-bg">
-    <div class="container">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="preamqueentwesige@gmail.com">preamqueentwesige@gmail.com</a></p>
-      <p>LinkedIn: <a href="">LinkedIn Profile</a></p>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2025 Twesige Pream Queen. All rights reserved.</p>
-  </footer>
-
-  <!-- Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
