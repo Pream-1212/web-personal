@@ -10,6 +10,12 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/skills/skill-2/assets/css/skill-2.css">
     <link rel="stylesheet" href="profile.css" />
     <!-- Custom CSS -->
     <style>
@@ -84,49 +90,99 @@
         </div>
       </div>
     </nav>
+    <!-- End Navbar -->
 
-    <!-- Hero Section -->
-    <header class="hero">
-      <h1>Hello! I’m Twesige Pream Queen</h1>
-      <p>
-        <i
-          ><em
-            >“Aspiring Software Engineer | JavaScript Enthusiast | ICT Learner
-            (certified) ”</em
-          ></i
-        >
-      </p>
-      <img src="myimage.jpg" width="300" height="400" alt="Profile Picture" />
-      <p class="lead">
-        JavaScript Enthusiast | CSE Student at Refactory Academy | Groundbreaker
-        Talent
-      </p>
-      <a href="#about" class="btn btn-primary">Learn More</a>
-    </header>
-
-    <!-- About Me -->
-    <section id="about">
+    <!-- About 1 - Bootstrap Brain Component -->
+    <section class="py-3 py-md-5">
       <div class="container">
-        <h2>About Me</h2>
-        <p>
-          Hi! I am Twesige Pream Queen. I have basic knowledge in tech including
-          HTML, CSS, and JavaScript. I enjoy learning new technologies and
-          expanding my skills in ICT and programming.
-        </p>
-        <pre>
+        <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
+          <div class="col-12 col-lg-6 col-xl-5">
+            <img
+              class="img-fluid rounded"
+              loading="lazy"
+              src="Office Lady.jpg"
+              alt="About 1"
+            />
+          </div>
+          <div class="col-12 col-lg-6 col-xl-7">
+            <div class="row justify-content-xl-center">
+              <div class="col-12 col-xl-11">
+                <h2 class="mb-3">Hello! I’m Twesige Pream Queen</h2>
+                <p class="lead fs-4 text-secondary mb-3">
+                  <i
+                    ><em
+                      >“Aspiring Software Engineer | JavaScript Enthusiast | ICT
+                      Learner (certified) ”</em
+                    ></i
+                  >
+                </p>
+                <p class="mb-5">
+                  JavaScript Enthusiast | CSE Student at Refactory Academy |
+                  Groundbreaker Talent
+                </p>
+                <div class="row gy-4 gy-md-0 gx-xxl-5X">
+                  <div class="col-12 col-md-6">
+                    <div class="d-flex">
+                      <div class="me-4 text-primary">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="32"
+                          fill="currentColor"
+                          class="bi bi-gear-fill"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <h2 class="h4 mb-3">About Me</h2>
+                        <p class="text-secondary mb-0">
+                          Hi! I am Twesige Pream Queen. I have basic knowledge
+                          in tech including HTML, CSS, and JavaScript. I enjoy
+                          learning new technologies and expanding my skills in
+                          ICT and programming.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 col-md-6">
+                    <div class="d-flex">
+                      <div class="me-4 text-primary">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="32"
+                          height="32"
+                          fill="currentColor"
+                          class="bi bi-fire"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"
+                          />
+                        </svg>
+                      </div>
+                      <div>
+                        <h2 class="h4 mb-3">Brief Education background</h2>
+                        <p class="text-secondary mb-0">
+                          <pre>
 Full Name:TWESIGE PREAM QUEEN
 Date of Birth: 05th May,2005
 Currently:  Student at Refactory Academy
 Location: Uganda, East Africa.
 
         </pre>
-        <img
-          src="me.jpg"
-          width="300"
-          height="400"
-          alt="Profile Picture"
-          class="img-fluid rounded"
-        />
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -148,35 +204,367 @@ Location: Uganda, East Africa.
       </div>
     </section>
 
+    <!-- Skill 2 - Bootstrap Brain Component -->
+<section class="bsb-skill-2 py-3 py-md-5 py-xl-8">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-md-10 col-lg-8">
+        <h3 class="fs-5 mb-2 text-secondary text-uppercase">Skills</h3>
+        <h4>Soft skills</h4>
+        <p class="display- mb-4">Self direction,Teamwork,communication,self-Discipline,Self-organization,Time Management,cautious & supportive traits,critical thinking,carefullness,committed to quality, and Helpful. </p>
+        </p>
+        
+      </div>
+    </div>
+  </div>
+
+  <div class="container overflow-hidden">
+    <div class="row gy-3 gy-lg-4">
+      <div class="col-12 col-lg-6">
+        <div class="card">
+          <div class="card-body p-4 p-xxl-5">
+            <div class="row align-items-center">
+              <div class="col-12 col-md-7 skill-title">
+                <h4 class="fw-bold mb-2">Tools </h4>GitHub,VS Code - including HTML,CSS,Git,Figma.</p>
+                <p class="text-secondary fst-italic mb-4 mb-md-0">
+              </div>
+              <div class="col-12 col-md-5 skill-progress">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar-width-1" role="progressbar" aria-label="Bootstrap" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="card">
+          <div class="card-body p-4 p-xxl-5">
+            <div class="row align-items-center">
+              <div class="col-12 col-md-7 skill-title">
+                <h3 class="fw-bold mb-2">React</h3>
+                <p class="text-secondary fst-italic mb-4 mb-md-0">React is a JavaScript library for building user interfaces. It is known for its speed, performance, and scalability.</p>
+              </div>
+              <div class="col-12 col-md-5 skill-progress">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar-width-2" role="progressbar" aria-label="React" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="card">
+          <div class="card-body p-4 p-xxl-5">
+            <div class="row align-items-center">
+              <div class="col-12 col-md-7 skill-title">
+                <h3 class="fw-bold mb-2">Vue</h3>
+                <p class="text-secondary fst-italic mb-4 mb-md-0">Vue is a progressive JavaScript framework for building user interfaces. It is known for its simplicity and flexibility.</p>
+              </div>
+              <div class="col-12 col-md-5 skill-progress">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar-width-3" role="progressbar" aria-label="Vue" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="card">
+          <div class="card-body p-4 p-xxl-5">
+            <div class="row align-items-center">
+              <div class="col-12 col-md-7 skill-title">
+                <h3 class="fw-bold mb-2">WordPress</h3>
+                <p class="text-secondary fst-italic mb-4 mb-md-0">WordPress is a content management system (CMS) that is used to create and manage websites.</p>
+              </div>
+              <div class="col-12 col-md-5 skill-progress">
+                <div class="progress">
+                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar-width-4" role="progressbar" aria-label="WordPress" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<img src="Screenshot (6).png" class="rounded float-start small-img" alt="">
+<img src="Screenshot 2025-07-27 141246.png" class="rounded -end small-img" alt="">
+<img src="Screenshot 2025-08-19 231016.png" class="rounded float-start small-img" alt="">
+
     <!-- Skills -->
     <section id="skills">
       <div class="container">
-        <h2>Skills</h2>
-       <p>I can use tools like HTML, CSS knowledge with Javascript life provider in this Tech world.  </p>
+        <h2><i>My Projects</i></h2>
+        <ol>
+          <li>Mayondo Wood and Furniture</li>
+          <li>Application Quiz</li>
+          <li>Beautiful Scenaries</li>
+        </ol>
+        
       </div>
     </section>
 
     <!-- Contact -->
-    <section id="contact" class="same-bg">
-      <div class="container">
-        <h2>Contact Me</h2>
+    <section id="contact" class="same-bg py-5">
+      <div class="container text-center">
+        <h2 class="mb-4">Contact Me</h2>
+
+        <div class="p-4 shadow rounded bg-white d-inline-block"></div>
         <p>
           Email:
-          <a href="preamqueentwesige@gmail.com">preamqueentwesige@gmail.com</a>
+          <a href="mailto:preamqueentwesige@gmail.com">preamqueentwesige@gmail.com</a>
         </p>
         <p>
           LinkedIn:
           <a href="https://www.linkedin.com/in/queen-pream-twesige-6b470837a/"
+          class="text-decoration-none"
+           target="_blank"
             >LinkedIn Profile</a
           >
         </p>
       </div>
+      <!--Section: Contact v.2-->
+<section class="mb-4">
+
+  <!--Section heading-->
+  <h2 class="h1-responsive font-weight-bold text-center my-4">Try now Contact me!</h2>
+  <!--Section description-->
+  <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact me directly. Am looking forward to your first positive steps only.</p>
+
+  <div class="row">
+
+      <!--Grid column-->
+      <div class="col-md-9 mb-md-0 mb-5">
+          <form id="contact-form" name="contact-form" action="mail.php" method="POST">
+
+              <!--Grid row-->
+              <div class="row">
+
+                  <!--Grid column-->
+                  <div class="col-md-6">
+                      <div class="md-form mb-0">
+                          <input type="text" id="name" name="name" class="form-control">
+                          <label for="name" class="">Your name</label>
+                      </div>
+                  </div>
+                  <!--Grid column-->
+
+                  <!--Grid column-->
+                  <div class="col-md-6">
+                      <div class="md-form mb-0">
+                          <input type="text" id="email" name="email" class="form-control">
+                          <label for="email" class="">Your email</label>
+                      </div>
+                  </div>
+                  <!--Grid column-->
+
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div class="row">
+                  <div class="col-md-12">
+                      <div class="md-form mb-0">
+                          <input type="text" id="subject" name="subject" class="form-control">
+                          <label for="subject" class="">Subject</label>
+                      </div>
+                  </div>
+              </div>
+              <!--Grid row-->
+
+              <!--Grid row-->
+              <div class="row">
+
+                  <!--Grid column-->
+                  <div class="col-md-12">
+
+                      <div class="md-form">
+                          <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
+                          <label for="message">Your message</label>
+                      </div>
+
+                  </div>
+              </div>
+              <!--Grid row-->
+
+          </form>
+
+          <div class="text-center text-md-left">
+              <a data-mdb-ripple-init class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+          </div>
+          <div class="status"></div>
+      </div>
+      <!--Grid column-->
+
+      <!-- Grid column-->
+       <div class="col-md-3 text-center">
+          <ul class="list-unstyled mb-0">
+              <li><i id="fas fa-map-marker-alt fa-2x"></i>
+                  <p>Nyangahya-Masindi, 51610, UG</p>
+              </li>
+
+              <li><i class="fas fa-phone mt-4 fa-2x"></i>
+                  <p>+25677 8955144/0755234869</p>
+              </li>
+
+              <li><i class="fas fa-envelope mt-4 fa-2x"></i>
+                  <p>preamqueent@gmail.com</p>
+              </li>
+          </ul>
+      </div>
+      <!--Grid column -->
+
+  </div>
+
+</section>
+<!--Section: Contact v.2-->
     </section>
 
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 Twesige Pream Queen. All rights reserved.</p>
-    </footer>
+   
+        
+  <!-- Footer -->
+  <footer
+          class="text-center text-lg-start text-white bg-dark"
+          
+          >
+    <!-- Grid container -->
+    <div class="container p-4 pb-0">
+      <!-- Section: Links -->
+      <section class="here">
+        <!--Grid row-->
+        <div class="row">
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">
+              TWESIGE PREAM QUEEN
+            </h6>
+            <p>
+              Don't hesitate to contact me if you have any questions or any collaborations. 
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Skills</h6>
+            <p>
+              <a class="text-white">Soft skills</a>
+            </p>
+            <p>
+              <a class="text-white">Tools</a>
+            </p>
+            <p>
+              <a class="text-white">Vue</a>
+            </p>
+            <p>
+              <a class="text-white">WordPress</a>
+            </p>
+          </div>
+          <!-- Grid column -->
+
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <hr class="w-100 clearfix d-md-none" />
+
+          <!-- Grid column -->
+          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+            <p><i class="fas fa-home mr-3">Nyangahya-Masindi, 51610, UG</i> </p>
+            <p><i class="fas fa-envelope mr-3">preamqueent@gmail.com</i> </p>
+            <p><i class="fas fa-phone mr-3">+25677 8955144/0755234869</i> </p>
+            
+          </div>
+          <!-- Grid column -->
+
+          <!-- Grid column -->
+          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+            <h6 class="text-uppercase mb-4 font-weight-bold">Follow Me</h6>
+
+           
+
+            <!-- Twitter -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #55acee"
+               href="https://x.com/home"
+               role="button"
+               ><i class="fab fa-twitter">Twitter</i
+              ></a>
+
+            <!-- Google -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #dd4b39"
+               href="https://mail.google.com/mail/u/0/#inbox"
+               role="button"
+               ><i class="fab fa-google">Google</i
+              ></a>
+
+            <!--YouTube -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: hsl(325, 96%, 51%)"
+               
+               href="https://www.youtube.com/"
+               role="button"
+               ><i class="fab fa-instagram">YouTube </i
+              ></a>
+              <!-- TikTok -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #1f1e1e"
+               href="https://mail.google.com/mail/u/0/#inbox"
+               role="button"
+               ><i class="fab fa-google">TikTok</i
+              ></a>
+
+            <!-- Linkedin -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #0082ca"
+               href="https://www.linkedin.com/in/queen-pream-twesige-6b470837a/"
+               role="button"
+               ><i class="fab fa-linkedin-in">LinkedIn</i
+              ></a>
+            <!-- Github -->
+            <a
+               class="btn btn-primary btn-floating m-1"
+               style="background-color: #333333"
+               href="https://github.com/Pream-1212/Javascript.git"
+               role="button"
+               ><i class="fab fa-github">GitHub</i
+              ></a>
+          </div>
+        </div>
+        <!--Grid row-->
+      </section>
+      <!-- Section: Links -->
+    </div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div
+         class="text-center p-3"
+         style="background-color: rgba(0, 0, 0, 0.2)"
+         >
+      © 2025 Copyright:
+      <a 
+         >Twesige Pream Queen</a
+        >
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Footer -->
+</div>
+<!-- End of .container -->
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>

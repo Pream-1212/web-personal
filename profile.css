@@ -1,7 +1,7 @@
 nav button {
   background: #ff5c5c;
-  border: none; */
-  color: white;
+  border: none; 
+  color:  white;
   padding: 5px 10px;
   border-radius: 5px;
   cursor: pointer;
@@ -50,16 +50,15 @@ nav button {
   list-style: none;
 }
 .section ul li {
-  margin: 10px 70;
+  margin: 10px 70px;
 }
 
 /* Footer */
-footer {
+.col-md-2 ,.list-unstyled , .col-md-4 ,.here{
   text-align: center;
   padding: 20px;
-  background: #1d1f22;
-  color: #4036d6;
-}
+  background-color: #333;
+  color:white}
 
 /* Dark Mode */
 body.dark-mode {
@@ -72,19 +71,19 @@ body.dark-mode nav {
 body.dark-mode nav button {
   background:#124170;
 }
-body.dark-mode .hero {
-  background: linear-gradient(135deg, #333, #555);
-}
+/* //body.dark-mode .hero {
+  background: linear-gradient(135deg, #333, #555); */
+
 
 body {
   padding: 70px 20px;
 }
- #about, #skills {
+.bsb-skill-2,  .py-3 , #skills {
   background: #124170;
   color: white;
   padding: 30px 20px;
   border-radius: 10px;
-  margin-top: 30px; */
+  margin-top: 30px;
 }
 .same-bg {
   background: #124170;
@@ -93,3 +92,13 @@ body {
   border-radius: 10px;
   margin-bottom: 30px;
 }
+.small-img {
+  width: 400px;
+  height: 400px;
+  margin: 5px;
+}
+.col-md-3.text-center {
+  background-color: transparent; /* removes dark background */
+  color: white; /* normal text color */
+}
+
