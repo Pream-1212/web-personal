@@ -3,180 +3,308 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Twesige Pream Queen - Portfolio</title>
+    <title>Twesige Pream Queen – Portfolio</title>
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://unpkg.com/bs-brain@2.0.4/components/skills/skill-2/assets/css/skill-2.css">
-    <link rel="stylesheet" href="profile.css" />
-    <!-- Custom CSS -->
+    <!-- Bootstrap 5 + Icons + Fonts -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet" />
+
     <style>
-      html {
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: 'Inter', sans-serif;
+        background: #f8fafc;
+        color: #0f172a;
         scroll-behavior: smooth;
       }
-      body {
-        padding-top: 70px; /* prevent navbar from covering content */
-        font-family: Arial, sans-serif;
+
+      /* navbar */
+      .navbar {
+        background: rgba(255, 255, 255, 0.96) !important;
+        backdrop-filter: blur(8px);
+        transition: all 0.3s;
       }
+
+      .navbar-brand {
+        font-weight: 800;
+        font-size: 1.5rem;
+        background: linear-gradient(135deg, #124170, #1e5a8a);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent !important;
+      }
+
+      .nav-link {
+        font-weight: 500;
+        color: #1e293b !important;
+        transition: 0.2s;
+      }
+
+      .nav-link:hover {
+        color: #124170 !important;
+        transform: translateY(-2px);
+      }
+
+      /* sections */
       section {
-        padding: 80px 20px;
+        padding: 80px 0;
       }
-      header.hero {
-        text-align: center;
-        padding: 100px 20px;
+
+      .section-title {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin-bottom: 2rem;
+        position: relative;
+        display: inline-block;
+      }
+
+      .section-title:after {
+        content: '';
+        position: absolute;
+        bottom: -12px;
+        left: 0;
+        width: 70px;
+        height: 4px;
         background: #124170;
+        border-radius: 4px;
       }
-      header.hero img {
-        border-radius: 15px;
-        margin: 20px 0;
+
+      /* hero / about image */
+      .hero-img {
+        border-radius: 32px;
+        box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease;
       }
-      footer {
-        text-align: center;
-        padding: 20px;
-        background: #124170;
-        margin-top: 50px;
+
+      .hero-img:hover {
+        transform: scale(1.02);
       }
-      .btn-primary {
-        background-color: #124170;
+
+      /* cards */
+      .card-hover {
+        transition: all 0.25s ease;
         border: none;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
       }
-      .btn-primary:hover {
-        background-color: #124170;
+
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.15);
+      }
+
+      /* progress bars */
+      .progress {
+        height: 12px;
+        border-radius: 20px;
+        background: #e2e8f0;
+      }
+
+      .progress-bar {
+        border-radius: 20px;
+        background: #124170;
+        font-size: 0.8rem;
+        font-weight: 600;
+        line-height: 12px;
+        color: white;
+        text-indent: 8px;
+        text-align: left;
+      }
+
+      .skill-card {
+        background: white;
+        border-radius: 24px;
+        padding: 1rem 1.5rem;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+        transition: all 0.2s;
+      }
+
+      .skill-card:hover {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+      }
+
+      /* gallery images */
+      .gallery-img {
+        max-width: 220px;
+        border-radius: 20px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .gallery-img:hover {
+        transform: scale(1.03);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+
+      /* contact form */
+      .contact-card {
+        background: white;
+        border-radius: 32px;
+        padding: 2rem;
+        box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.1);
+      }
+
+      .form-control,
+      .form-control:focus {
+        border-radius: 16px;
+        border: 1px solid #cbd5e1;
+        padding: 12px 16px;
+        transition: 0.2s;
+      }
+
+      .form-control:focus {
+        border-color: #124170;
+        box-shadow: 0 0 0 3px rgba(18, 65, 112, 0.2);
+      }
+
+      .btn-send {
+        background: #124170;
+        border: none;
+        padding: 12px 32px;
+        border-radius: 40px;
+        font-weight: 600;
+        transition: 0.2s;
+      }
+
+      .btn-send:hover {
+        background: #0e3457;
+        transform: translateY(-2px);
+      }
+
+      footer a {
+        text-decoration: none;
+        transition: 0.2s;
+      }
+
+      footer a:hover {
+        opacity: 0.8;
+        text-decoration: underline;
+      }
+
+      .bg-soft {
+        background: #f1f5f9;
+      }
+
+      .text-accent {
+        color: #124170;
+      }
+
+      @media (max-width: 768px) {
+        section {
+          padding: 50px 0;
+        }
+        .gallery-img {
+          max-width: 150px;
+        }
+      }
+            /* Improved gallery grid - consistent image sizes */
+      .gallery-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1.5rem;
+        margin-top: 1rem;
+      }
+
+      .gallery-item {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        transition: transform 0.2s, box-shadow 0.2s;
+        text-align: center;
+      }
+
+      .gallery-item:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 30px rgba(0,0,0,0.12);
+      }
+
+      .gallery-item img {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;   /* ensures all images fill the area without distortion */
+        display: block;
+        background: #f0f2f5;
+      }
+
+      .gallery-caption {
+        display: block;
+        padding: 0.6rem 0.5rem;
+        font-size: 0.85rem;
+        font-weight: 500;
+        color: #1e293b;
+        background: white;
+        border-top: 1px solid #eef2f6;
+      }
+
+      @media (max-width: 640px) {
+        .gallery-grid {
+          grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+          gap: 1rem;
+        }
+        .gallery-item img {
+          height: 140px;
+        }
+        .gallery-caption {
+          font-size: 0.75rem;
+          padding: 0.4rem 0.3rem;
+        }
       }
     </style>
   </head>
+
   <body>
     <!-- Navbar -->
-    <nav
-      class="navbar navbar-expand-lg navbar-light bg-light fixed-top shadow-sm"
-    >
+    <nav class="navbar navbar-expand-lg fixed-top shadow-sm">
       <div class="container">
-        <a class="navbar-brand fw-bold" href="#">Twesige Pream Queen</a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <a class="navbar-brand" href="#">Twesige Pream Queen</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
           <span class="navbar-toggler-icon"></span>
         </button>
-
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#about">About Me</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#education">Education</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact</a>
-            </li>
+            <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+            <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills">Skills & Projects</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
           </ul>
         </div>
       </div>
     </nav>
-    <!-- End Navbar -->
 
-    <!-- About 1 - Bootstrap Brain Component -->
-    <section class="py-3 py-md-5">
+    <!-- About Section (Hero) -->
+    <section id="about" class="pt-5 mt-4">
       <div class="container">
-        <div class="row gy-3 gy-md-4 gy-lg-0 align-items-lg-center">
-          <div class="col-12 col-lg-6 col-xl-5">
-            <img
-              class="img-fluid rounded"
-              loading="lazy"
-              src="Office Lady.jpg"
-              alt="About 1"
-            />
+        <div class="row align-items-center gy-5">
+          <div class="col-lg-6">
+            <img class="img-fluid hero-img" src="Office Lady.jpg" alt="Twesige portrait" loading="lazy" />
           </div>
-          <div class="col-12 col-lg-6 col-xl-7">
-            <div class="row justify-content-xl-center">
-              <div class="col-12 col-xl-11">
-                <h2 class="mb-3">Hello! I’m Twesige Pream Queen</h2>
-                <p class="lead fs-4 text-secondary mb-3">
-                  <i
-                    ><em
-                      >“Software Engineer | JavaScript Enthusiast | ICT
-                      Learner (certified) ”</em
-                    ></i
-                  >
-                </p>
-                <p class="mb-5">
-                  JavaScript Enthusiast | CSE Student at Refactory Academy |
-                  Groundbreaker Talent
-                </p>
-                <div class="row gy-4 gy-md-0 gx-xxl-5X">
-                  <div class="col-12 col-md-6">
-                    <div class="d-flex">
-                      <div class="me-4 text-primary">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="32"
-                          height="32"
-                          fill="currentColor"
-                          class="bi bi-gear-fill"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M9.405 1.05c-.413-1.4-2.397-1.4-2.81 0l-.1.34a1.464 1.464 0 0 1-2.105.872l-.31-.17c-1.283-.698-2.686.705-1.987 1.987l.169.311c.446.82.023 1.841-.872 2.105l-.34.1c-1.4.413-1.4 2.397 0 2.81l.34.1a1.464 1.464 0 0 1 .872 2.105l-.17.31c-.698 1.283.705 2.686 1.987 1.987l.311-.169a1.464 1.464 0 0 1 2.105.872l.1.34c.413 1.4 2.397 1.4 2.81 0l.1-.34a1.464 1.464 0 0 1 2.105-.872l.31.17c1.283.698 2.686-.705 1.987-1.987l-.169-.311a1.464 1.464 0 0 1 .872-2.105l.34-.1c1.4-.413 1.4-2.397 0-2.81l-.34-.1a1.464 1.464 0 0 1-.872-2.105l.17-.31c.698-1.283-.705-2.686-1.987-1.987l-.311.169a1.464 1.464 0 0 1-2.105-.872l-.1-.34zM8 10.93a2.929 2.929 0 1 1 0-5.86 2.929 2.929 0 0 1 0 5.858z"
-                          />
-                        </svg>
-                      </div>
-                      <div>
-                        <h2 class="h4 mb-3">About Me</h2>
-                        <p class="text-secondary mb-0">
-                          Hi! I'm Twesige Pream Queen, a Software Developer with experience building web and mobile applications using React, React Native, JavaScript, Node.js, Django, and PostgreSQL. I enjoy transforming ideas into practical solutions and have worked on projects ranging from secure marketplace platforms to business management systems.
-
-I am passionate about software engineering, continuous learning, and creating technology that solves real-world challenges. I enjoy collaborating with teams, exploring new technologies, and building products that deliver meaningful impact to users.
-
-                        </p>
-                      </div>
-                    </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold">Hello! I’m Twesige Pream Queen</h1>
+            <p class="lead text-secondary mt-3 fst-italic">“Software Engineer | JavaScript Enthusiast | ICT Certified”</p>
+            <p class="mb-4">JavaScript Enthusiast | CSE Student at Refactory Academy | Groundbreaker Talent</p>
+            <div class="row g-4">
+              <div class="col-md-6">
+                <div class="d-flex gap-3">
+                  <i class="fas fa-gear fa-2x text-accent"></i>
+                  <div>
+                    <h5 class="fw-bold">About Me</h5>
+                    <p class="text-secondary">I build web & mobile apps with React, React Native, Node.js, Django, and PostgreSQL. Passionate about solving real-world problems.</p>
                   </div>
-                  <div class="col-12 col-md-6">
-                    <div class="d-flex">
-                      <div class="me-4 text-primary">
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="32"
-                          height="32"
-                          fill="currentColor"
-                          class="bi bi-fire"
-                          viewBox="0 0 16 16"
-                        >
-                          <path
-                            d="M8 16c3.314 0 6-2 6-5.5 0-1.5-.5-4-2.5-6 .25 1.5-1.25 2-1.25 2C11 4 9 .5 6 0c.357 2 .5 4-2 6-1.25 1-2 2.729-2 4.5C2 14 4.686 16 8 16Zm0-1c-1.657 0-3-1-3-2.75 0-.75.25-2 1.25-3C6.125 10 7 10.5 7 10.5c-.375-1.25.5-3.25 2-3.5-.179 1-.25 2 1 3 .625.5 1 1.364 1 2.25C11 14 9.657 15 8 15Z"
-                          />
-                        </svg>
-                      </div>
-                      <div>
-                        <h2 class="h4 mb-3">Brief Education background</h2>
-                        <p class="text-secondary mb-0">
-                          <pre>
-Full Name:TWESIGE PREAM QUEEN
-Date of Birth: 05th May,2005
-Currently:  Student at Refactory Academy
-Location: Uganda, East Africa.
-
-        </pre>
-                        </p>
-                      </div>
-                    </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="d-flex gap-3">
+                  <i class="fas fa-fire fa-2x text-accent"></i>
+                  <div>
+                    <h5 class="fw-bold">Brief Education</h5>
+                    <p class="text-secondary mb-0"><strong>Full name:</strong> Twesige Pream Queen<br> <strong>DOB:</strong> 05th May,2005<br> <strong>Location:</strong> Kampala-Uganda, East Africa</p>
                   </div>
                 </div>
               </div>
@@ -186,387 +314,227 @@ Location: Uganda, East Africa.
       </div>
     </section>
 
-    <!-- Education -->
-    <section id="education" class="same-bg">
+    <!-- Education Section -->
+    <section id="education" class="bg-soft">
       <div class="container">
-        <h2>Education Background</h2>
-        <ul>
-          From
-          <li>2025-2026: CSE-Javascript -- At Refactory Academy</li>
-          <li>
-            2023-2024: Uganda Advanced Certificate of Education -- Saint Andrea
-            Kaahwa's College(STAKC)
-          </li>
-          <li>2021-2022: Certificate in ICT -- RedEarth Education</li>
-          <li>2018-2022: Uganda Certificate of Education -- STAKC</li>
-          <li>interest: Coding</li>
-        </ul>
+        <h2 class="section-title">Education Background</h2>
+        <div class="row mt-4">
+          <div class="col-md-8">
+            <ul class="list-group list-group-flush bg-transparent">
+              <li class="list-group-item bg-transparent border-0 ps-0"><i class="fas fa-calendar-alt text-accent me-2"></i> 2025–2026 : CSE-JavaScript – Refactory Academy</li>
+              <li class="list-group-item bg-transparent border-0 ps-0"><i class="fas fa-calendar-alt text-accent me-2"></i> 2023–2024 : UACE – Saint Andrea Kaahwa's College</li>
+              <li class="list-group-item bg-transparent border-0 ps-0"><i class="fas fa-certificate text-accent me-2"></i> 2021–2022 : Certificate in ICT – RedEarth Education</li>
+              <li class="list-group-item bg-transparent border-0 ps-0"><i class="fas fa-calendar-alt text-accent me-2"></i> 2018–2022 : UCE – STAKC</li>
+              <li class="list-group-item bg-transparent border-0 ps-0"><i class="fas fa-heart text-accent me-2"></i> Interest: Coding & Problem-solving</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <!-- Skill 2 - Bootstrap Brain Component -->
-<section class="bsb-skill-2 py-3 py-md-5 py-xl-8">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 col-md-10 col-lg-8">
-        <h3 class="fs-5 mb-2 text-secondary text-uppercase">Skills</h3>
-        <h4>Soft skills</h4>
-        <p class="display- mb-4">Self direction,Teamwork,communication,self-Discipline,Self-organization,Time Management,cautious & supportive traits,critical thinking,carefullness,committed to quality, and Helpful. </p>
-        </p>
-        
-      </div>
-    </div>
-  </div>
-
-  <div class="container overflow-hidden">
-    <div class="row gy-3 gy-lg-4">
-      <div class="col-12 col-lg-6">
-        <div class="card">
-          <div class="card-body p-4 p-xxl-5">
-            <div class="row align-items-center">
-              <div class="col-12 col-md-7 skill-title">
-                <h4 class="fw-bold mb-2">Tools </h4>GitHub,VS Code - including HTML,CSS,Git,Figma.</p>
-                <p class="text-secondary fst-italic mb-4 mb-md-0">
-              </div>
-              <div class="col-12 col-md-5 skill-progress">
-                <div class="progress">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar-width-1" role="progressbar" aria-label="Bootstrap" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100">85%</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-6">
-        <div class="card">
-          <div class="card-body p-4 p-xxl-5">
-            <div class="row align-items-center">
-              <div class="col-12 col-md-7 skill-title">
-                <h3 class="fw-bold mb-2">React</h3>
-                <p class="text-secondary fst-italic mb-4 mb-md-0">React is a JavaScript library for building user interfaces. It is known for its speed, performance, and scalability.</p>
-              </div>
-              <div class="col-12 col-md-5 skill-progress">
-                <div class="progress">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar-width-2" role="progressbar" aria-label="React" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">75%</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-6">
-        <div class="card">
-          <div class="card-body p-4 p-xxl-5">
-            <div class="row align-items-center">
-              <div class="col-12 col-md-7 skill-title">
-                <h3 class="fw-bold mb-2">Vue</h3>
-                <p class="text-secondary fst-italic mb-4 mb-md-0">Vue is a progressive JavaScript framework for building user interfaces. It is known for its simplicity and flexibility.</p>
-              </div>
-              <div class="col-12 col-md-5 skill-progress">
-                <div class="progress">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar-width-3" role="progressbar" aria-label="Vue" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100">65%</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="col-12 col-lg-6">
-        <div class="card">
-          <div class="card-body p-4 p-xxl-5">
-            <div class="row align-items-center">
-              <div class="col-12 col-md-7 skill-title">
-                <h3 class="fw-bold mb-2">WordPress</h3>
-                <p class="text-secondary fst-italic mb-4 mb-md-0">WordPress is a content management system (CMS) that is used to create and manage websites.</p>
-              </div>
-              <div class="col-12 col-md-5 skill-progress">
-                <div class="progress">
-                  <div class="progress-bar progress-bar-striped progress-bar-animated progress-bar-width-4" role="progressbar" aria-label="WordPress" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<img src="Screenshot (6).png" class="rounded float-start small-img" alt="">
-<img src="Screenshot 2025-07-27 141246.png" class="rounded -end small-img" alt="">
-<img src="Screenshot 2025-08-19 231016.png" class="rounded float-start small-img" alt="">
-
-    <!-- Skills -->
+    <!-- Skills + Projects -->
     <section id="skills">
       <div class="container">
-        <h2><i>My Projects</i></h2>
-        <ol>
-          <li>Mayondo Wood and Furniture</li>
-          <li>Application Quiz</li>
-          <li>Beautiful Scenaries</li>
-        </ol>
-        
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="same-bg py-5">
-      <div class="container text-center">
-        <h2 class="mb-4">Contact Me</h2>
-
-        <div class="p-4 shadow rounded bg-white d-inline-block"></div>
-        <p>
-          Email:
-          <a href="mailto:preamqueentwesige@gmail.com">preamqueentwesige@gmail.com</a>
-        </p>
-        <p>
-          LinkedIn:
-          <a href="https://www.linkedin.com/in/queen-pream-twesige-6b470837a/"
-          class="text-decoration-none"
-           target="_blank"
-            >LinkedIn Profile</a
-          >
-        </p>
-      </div>
-      <!--Section: Contact v.2-->
-<section class="mb-4">
-
-  <!--Section heading-->
-  <h2 class="h1-responsive font-weight-bold text-center my-4">Try now Contact me!</h2>
-  <!--Section description-->
-  <p class="text-center w-responsive mx-auto mb-5">Do you have any questions? Please do not hesitate to contact me directly. Am looking forward to your first positive steps only.</p>
-
-  <div class="row">
-
-      <!--Grid column-->
-      <div class="col-md-9 mb-md-0 mb-5">
-          <form id="contact-form" name="contact-form" action="mail.php" method="POST">
-
-              <!--Grid row-->
-              <div class="row">
-
-                  <!--Grid column-->
-                  <div class="col-md-6">
-                      <div class="md-form mb-0">
-                          <input type="text" id="name" name="name" class="form-control">
-                          <label for="name" class="">Your name</label>
-                      </div>
-                  </div>
-                  <!--Grid column-->
-
-                  <!--Grid column-->
-                  <div class="col-md-6">
-                      <div class="md-form mb-0">
-                          <input type="text" id="email" name="email" class="form-control">
-                          <label for="email" class="">Your email</label>
-                      </div>
-                  </div>
-                  <!--Grid column-->
-
-              </div>
-              <!--Grid row-->
-
-              <!--Grid row-->
-              <div class="row">
-                  <div class="col-md-12">
-                      <div class="md-form mb-0">
-                          <input type="text" id="subject" name="subject" class="form-control">
-                          <label for="subject" class="">Subject</label>
-                      </div>
-                  </div>
-              </div>
-              <!--Grid row-->
-
-              <!--Grid row-->
-              <div class="row">
-
-                  <!--Grid column-->
-                  <div class="col-md-12">
-
-                      <div class="md-form">
-                          <textarea type="text" id="message" name="message" rows="2" class="form-control md-textarea"></textarea>
-                          <label for="message">Your message</label>
-                      </div>
-
-                  </div>
-              </div>
-              <!--Grid row-->
-
-          </form>
-
-          <div class="text-center text-md-left">
-              <a data-mdb-ripple-init class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
+        <h2 class="section-title">Technical Arsenal</h2>
+        <div class="row mt-3">
+          <div class="col-md-6">
+            <h5 class="fw-semibold"> Soft skills</h5>
+            <p>Self-direction, teamwork, communication, discipline, time management, critical thinking, attention to quality, helpfulness.</p>
+            <h5 class="fw-semibold mt-4">Technologies & Tools</h5>
+            <ul class="list-unstyled">
+              <li><i class="fas fa-check-circle text-accent me-2"></i> <strong>Development:</strong> VS Code, Git, GitHub, npm, Expo</li>
+              <li><i class="fas fa-check-circle text-accent me-2"></i> <strong>Frontend:</strong> HTML5, CSS3, JavaScript, React.js, React Native</li>
+              <li><i class="fas fa-check-circle text-accent me-2"></i> <strong>Backend:</strong> Node.js, Express.js, Django, DRF</li>
+              <li><i class="fas fa-check-circle text-accent me-2"></i> <strong>Databases:</strong> PostgreSQL, MongoDB, Atlas, Compass</li>
+              <li><i class="fas fa-check-circle text-accent me-2"></i> <strong>Tools & Design:</strong> Figma, Postman, Render, Visily</li>
+            </ul>
           </div>
-          <div class="status"></div>
-      </div>
-      <!--Grid column-->
-
-      <!-- Grid column-->
-       <div class="col-md-3 text-center">
-          <ul class="list-unstyled mb-0">
-              <li><i id="fas fa-map-marker-alt fa-2x"></i>
-                  <p>Nyangahya-Masindi, 51610, UG</p>
-              </li>
-
-              <li><i class="fas fa-phone mt-4 fa-2x"></i>
-                  <p>+25677 8955144/0755234869</p>
-              </li>
-
-              <li><i class="fas fa-envelope mt-4 fa-2x"></i>
-                  <p>preamqueent@gmail.com</p>
-              </li>
-          </ul>
-      </div>
-      <!--Grid column -->
-
-  </div>
-
-</section>
-<!--Section: Contact v.2-->
-    </section>
-
-   
-        
-  <!-- Footer -->
-  <footer
-          class="text-center text-lg-start text-white bg-dark"
-          
-          >
-    <!-- Grid container -->
-    <div class="container p-4 pb-0">
-      <!-- Section: Links -->
-      <section class="here">
-        <!--Grid row-->
-        <div class="row">
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">
-              TWESIGE PREAM QUEEN
-            </h6>
-            <p>
-              Don't hesitate to contact me if you have any questions or any collaborations. 
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <hr class="w-100 clearfix d-md-none" />
-
-          <!-- Grid column -->
-          <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Skills</h6>
-            <p>
-              <a class="text-white">Soft skills</a>
-            </p>
-            <p>
-              <a class="text-white">Tools</a>
-            </p>
-            <p>
-              <a class="text-white">Vue</a>
-            </p>
-            <p>
-              <a class="text-white">WordPress</a>
-            </p>
-          </div>
-          <!-- Grid column -->
-
-          <hr class="w-100 clearfix d-md-none" />
-
-          <!-- Grid column -->
-          <hr class="w-100 clearfix d-md-none" />
-
-          <!-- Grid column -->
-          <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-            <p><i class="fas fa-home mr-3">Nyangahya-Masindi, 51610, UG</i> </p>
-            <p><i class="fas fa-envelope mr-3">preamqueent@gmail.com</i> </p>
-            <p><i class="fas fa-phone mr-3">+25677 8955144/0755234869</i> </p>
-            
-          </div>
-          <!-- Grid column -->
-
-          <!-- Grid column -->
-          <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-            <h6 class="text-uppercase mb-4 font-weight-bold">Follow Me</h6>
-
-           
-
-            <!-- Twitter -->
-            <a
-               class="btn btn-primary btn-floating m-1"
-               style="background-color: #55acee"
-               href="https://x.com/home"
-               role="button"
-               ><i class="fab fa-twitter">Twitter</i
-              ></a>
-
-            <!-- Google -->
-            <a
-               class="btn btn-primary btn-floating m-1"
-               style="background-color: #dd4b39"
-               href="https://mail.google.com/mail/u/0/#inbox"
-               role="button"
-               ><i class="fab fa-google">Google</i
-              ></a>
-
-            <!--YouTube -->
-            <a
-               class="btn btn-primary btn-floating m-1"
-               style="background-color: hsl(325, 96%, 51%)"
-               
-               href="https://www.youtube.com/"
-               role="button"
-               ><i class="fab fa-instagram">YouTube </i
-              ></a>
-              <!-- TikTok -->
-            <a
-               class="btn btn-primary btn-floating m-1"
-               style="background-color: #1f1e1e"
-               href="https://mail.google.com/mail/u/0/#inbox"
-               role="button"
-               ><i class="fab fa-google">TikTok</i
-              ></a>
-
-            <!-- Linkedin -->
-            <a
-               class="btn btn-primary btn-floating m-1"
-               style="background-color: #0082ca"
-               href="https://www.linkedin.com/in/queen-pream-twesige-6b470837a/"
-               role="button"
-               ><i class="fab fa-linkedin-in">LinkedIn</i
-              ></a>
-            <!-- Github -->
-            <a
-               class="btn btn-primary btn-floating m-1"
-               style="background-color: #333333"
-               href="https://github.com/Pream-1212/Javascript.git"
-               role="button"
-               ><i class="fab fa-github">GitHub</i
-              ></a>
+          <div class="col-md-6">
+            <div class="skill-card">
+              <div class="d-flex justify-content-between"><span class="fw-bold">React</span><span>75%</span></div>
+              <div class="progress mt-2"><div class="progress-bar" style="width:75%"></div></div>
+              <p class="small text-secondary mt-2">Component-based UI library, hooks, state management.</p>
+            </div>
+            <!-- Replaced Vue.js with Django REST API -->
+            <div class="skill-card">
+              <div class="d-flex justify-content-between"><span class="fw-bold">Django REST API</span><span>80%</span></div>
+              <div class="progress mt-2"><div class="progress-bar" style="width:80%"></div></div>
+              <p class="small text-secondary mt-2">RESTful APIs, serializers, authentication, viewsets.</p>
+            </div>
+            <div class="skill-card">
+              <div class="d-flex justify-content-between"><span class="fw-bold">React Native</span><span>90%</span></div>
+              <div class="progress mt-2"><div class="progress-bar" style="width:90%"></div></div>
+              <p class="small text-secondary mt-2">Cross-platform mobile apps (iOS & Android).</p>
+            </div>
           </div>
         </div>
-        <!--Grid row-->
-      </section>
-      <!-- Section: Links -->
-    </div>
-    <!-- Grid container -->
 
-    <!-- Copyright -->
-    <div
-         class="text-center p-3"
-         style="background-color: rgba(0, 0, 0, 0.2)"
-         >
-      © 2025 Copyright:
-      <a 
-         >Twesige Pream Queen</a
-        >
-    </div>
-    <!-- Copyright -->
-  </footer>
-  <!-- Footer -->
-</div>
-<!-- End of .container -->
+        <h2 class="section-title mt-5">Featured Projects</h2>
+        <div class="row g-4">
+          <div class="col-md-4"><div class="card card-hover h-100"><div class="card-body"><h5 class="card-title">EKI</h5><p class="card-text"><p class="card-text">
+  Trusted marketplace for product sales and service bookings with secure payments and fraud prevention features.
+</p></p></div></div></div>
+          <div class="col-md-4"><div class="card card-hover h-100"><div class="card-body"><h5 class="card-title">My Grocery Buddy</h5><p class="card-text">Smart shopping list & price tracker app.</p></div></div></div>
+          <div class="col-md-4"><div class="card card-hover h-100"><div class="card-body"><h5 class="card-title">Mayondo Wood & Furniture</h5><p class="card-text">Business management system for woodworks.</p></div></div></div>
+          <div class="col-md-4"><div class="card card-hover h-100"><div class="card-body"><h5 class="card-title">Application Quiz</h5><p class="card-text">Interactive quiz app with real‑time scoring.</p></div></div></div>
+          <div class="col-md-4"><div class="card card-hover h-100"><div class="card-body"><h5 class="card-title">Beautiful Sceneries – Frontend Website</h5><p class="card-text">A modern, responsive website for a cocoa processing company. Built with HTML, CSS.</p></div></div></div>
+        </div>
 
-    <!-- Bootstrap JS -->
+               <!-- Improved screenshot gallery - consistent sizes -->
+        <h3 class="mt-5 mb-3 fw-semibold"> Project previews</h3>
+        <div class="gallery-grid">
+          <div class="gallery-item">
+            <img src="mobile.jpeg" alt="Mobile app preview">
+            <span class="gallery-caption">EKI Mobile UI</span>
+          </div>
+          <div class="gallery-item">
+            <img src="image.png" alt="Dashboard preview">
+            <span class="gallery-caption">Grocery Buddy</span>
+          </div>
+          <div class="gallery-item">
+            <img src="Screenshot 2026-06-15 130555.png" alt="Project screenshot">
+            <span class="gallery-caption">EKI Web app</span>
+          </div>
+          <div class="gallery-item">
+            <img src="mayondo.png" alt="Mayondo system">
+            <span class="gallery-caption">Mayondo Wood</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact + Working Form -->
+    <section id="contact" class="bg-soft">
+      <div class="container">
+        <div class="text-center mb-5">
+          <h2 class="section-title" style="display: inline-block;">Let's talk</h2>
+          <p class="lead">I’ll reply within 24h — just drop a message</p>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <div class="contact-card">
+              <form id="dynamicContactForm" novalidate>
+                <div class="row g-4">
+                  <div class="col-md-6">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Your full name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="email" id="email" name="email" class="form-control" placeholder="Your email address" required>
+                  </div>
+                  <div class="col-12">
+                    <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
+                  </div>
+                  <div class="col-12">
+                    <textarea id="message" name="message" rows="4" class="form-control" placeholder="Your message..." required></textarea>
+                  </div>
+                  <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-send btn-primary px-5 py-2">Send message <i class="fas fa-paper-plane ms-2"></i></button>
+                    <div id="formFeedback" class="mt-3 small fw-semibold"></div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5 text-center">
+          <div class="col-md-4 mb-3"><i class="fas fa-envelope text-accent fa-2x"></i><p class="mt-2"><a href="mailto:preamqueentwesige@gmail.com" class="text-dark">preamqueentwesige@gmail.com</a></p></div>
+          <div class="col-md-4 mb-3"><i class="fas fa-phone-alt text-accent fa-2x"></i><p class="mt-2">+256 778 955144 / 0755234869</p></div>
+          <div class="col-md-4 mb-3"><i class="fab fa-linkedin text-accent fa-2x"></i><p class="mt-2"><a href="https://www.linkedin.com/in/queen-pream-twesige-6b470837a/" target="_blank">LinkedIn Profile</a></p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white pt-5 pb-3">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <h5>Twesige Pream Queen</h5>
+            <p>Building bridges between ideas and code. Let’s create something meaningful.</p>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Quick links</h5>
+            <ul class="list-unstyled">
+              <li><a href="#about" class="text-white-50">About</a></li>
+              <li><a href="#education" class="text-white-50">Education</a></li>
+              <li><a href="#skills" class="text-white-50">Skills & Projects</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 mb-4">
+            <h5>Follow me</h5>
+            <a href="https://x.com/PreamQueen" class="text-white me-3 fs-5"><i class="fab fa-twitter"></i></a>
+            <a href="https://github.com/Pream-1212/" class="text-white me-3 fs-5"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/pream-twesige-79060b38b/" class="text-white me-3 fs-5"><i class="fab fa-linkedin"></i></a>
+            <a href="https://www.youtube.com/@TwesigePreamQueen-q7l" class="text-white me-3 fs-5"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+        <hr class="bg-secondary">
+        <div class="text-center">© 2025 Twesige Pream Queen – Built with passion </div>
+      </div>
+    </footer>
+
+    <!-- Bootstrap JS + Form handling (no backend needed, uses FormSubmit) -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+  (function() {
+    const form = document.getElementById('dynamicContactForm');
+    const feedbackDiv = document.getElementById('formFeedback');  // ← variable name
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      feedbackDiv.innerHTML = ''; // clear previous
+      
+      const name = form.querySelector('[name="name"]').value.trim();
+      const email = form.querySelector('[name="email"]').value.trim();
+      const subject = form.querySelector('[name="subject"]').value.trim();
+      const message = form.querySelector('[name="message"]').value.trim();
+      
+      // Validations
+      if (name.length < 2) {
+        feedbackDiv.innerHTML = '<span class="text-danger">❌ Please enter your full name (at least 2 characters).</span>';
+        return;
+      }
+      
+      const emailPattern = /^[^\s@]+@([^\s@]+\.)+[^\s@]+$/;
+      if (!emailPattern.test(email)) {
+        feedbackDiv.innerHTML = '<span class="text-danger">❌ Please enter a valid email address (e.g., name@domain.com).</span>';
+        return;
+      }
+      
+      if (subject.length < 3) {
+        feedbackDiv.innerHTML = '<span class="text-danger">❌ Subject must be at least 3 characters.</span>';
+        return;
+      }
+      
+      if (message.length < 10) {
+        feedbackDiv.innerHTML = '<span class="text-danger">❌ Message must be at least 10 characters.</span>';
+        return;
+      }
+      
+      // If all passed, show sending indicator
+      feedbackDiv.innerHTML = '<span class="text-primary"><i class="fas fa-spinner fa-pulse"></i> Sending...</span>';
+      
+      // Send to FormSubmit
+      const data = { name, email, subject, message };
+      
+      try {
+        const response = await fetch('https://formsubmit.co/ajax/preamqueentwesige@gmail.com', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data)
+        });
+        if (response.ok) {
+          feedbackDiv.innerHTML = '<span class="text-success">✅ Message sent! I’ll get back to you soon.</span>';
+          form.reset();
+        } else {
+          feedbackDiv.innerHTML = '<span class="text-danger">❌ Failed to send. Try again or email me directly.</span>';
+        }
+      } catch (err) {
+        feedbackDiv.innerHTML = '<span class="text-danger">⚠️ Network error. Please check your connection.</span>';
+      }
+    });
+  })();
+</script>
   </body>
 </html>
